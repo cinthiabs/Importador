@@ -31,11 +31,15 @@ namespace Entities.Entidades
         public string destinatarioCNPJ { get; set; }
         public string destinatarioRazaoSocial { get; set; }
         public string destinatarioEndereco { get; set; }
+        public string destinatarioBairro { get; set; }
         public string destinatarioMunicipioID { get; set; }
         public string destinatarioMunicipio { get; set; }
         public string destinatarioCEP { get; set; }
         public string destinatarioUF { get; set; }
         public string InformacaoAdicional { get; set; }
         public string valor { get; set; }
+        public string volume { get; set; }
+        public string peso { get; set; }
+
     }
 }

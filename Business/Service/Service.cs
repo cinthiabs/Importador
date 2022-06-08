@@ -78,6 +78,7 @@ namespace Business.Service
             {
                 Pedidos ped = new Pedidos();
                 XmlDocument doc = new XmlDocument();
+
                 doc.Load(arquivos);
 
                 XmlNodeList ide = doc.GetElementsByTagName("ide");
@@ -85,8 +86,14 @@ namespace Business.Service
                 {
                     ped.serieNFE  = ide[i]["serie"].InnerText;
                     ped.numeroNF =  ide[i]["nNF"].InnerText;
+                    ped.Documento = ide[i]["nNF"].InnerText;
                     ped.dataNF =    ide[i]["dhEmi"].InnerText;
-              //      ped.chave_NFE = ide[i]["refNFe"].InnerText;
+                }
+                 XmlNodeList NFref = doc.GetElementsByTagName("NFref");
+                for (int i = 0; i < NFref.Count; i++)
+                {
+                    ped.chave_NFE = NFref[i]["refNFe"].InnerText;
+
                 }
                 XmlNodeList emit = doc.GetElementsByTagName("emit");
                 for (int i = 0; i < emit.Count; i++)
@@ -99,6 +106,7 @@ namespace Business.Service
                 XmlNodeList enderEmit = doc.GetElementsByTagName("enderEmit");
                 for (int i = 0; i < enderEmit.Count; i++)
                 {
+                    ped.remetenteEndereco = enderEmit[i]["xLgr"].InnerText;
                     ped.remetenteNumero = enderEmit[i]["nro"].InnerText;
                     ped.remetenteBairro = enderEmit[i]["xBairro"].InnerText;
                     ped.remetenteMunicipio = enderEmit[i]["xMun"].InnerText;
@@ -111,94 +119,36 @@ namespace Business.Service
                 {
                     ped.destinatarioCNPJ = dest[i]["CPF"].InnerText;
                     ped.destinatarioRazaoSocial = dest[i]["xNome"].InnerText;
-                    ped.remetenteMunicipio = dest[i]["xMun"].InnerText;
-                    ped.remetenteUF = dest[i]["UF"].InnerText;
-                    ped.remetenteCEP = dest[i]["CEP"].InnerText;
+             
                 }
+                XmlNodeList enderDest = doc.GetElementsByTagName("enderDest");
+                for (int i = 0; i < enderDest.Count; i++)
+                {
+                    ped.destinatarioEndereco = enderDest[i]["xLgr"].InnerText + enderDest[i]["nro"].InnerText;
+                    ped.destinatarioBairro = enderDest[i]["xBairro"].InnerText;
+                    ped.destinatarioMunicipio = enderDest[i]["xMun"].InnerText;
+                    ped.destinatarioUF = enderDest[i]["UF"].InnerText;
+                    ped.destinatarioCEP = enderDest[i]["CEP"].InnerText;
+                }
+                XmlNodeList prod = doc.GetElementsByTagName("prod");
+                for (int i = 0; i < prod.Count; i++)
+                {
+                    ped.InformacaoAdicional = prod[i]["xProd"].InnerText;
 
+                }
+                XmlNodeList ICMSTot = doc.GetElementsByTagName("ICMSTot");
+                for (int i = 0; i < ICMSTot.Count; i++)
+                {
+                    ped.valor = ICMSTot[i]["vNF"].InnerText;
 
-                //  string TagName = "";
-                //  Pedidos ped = new Pedidos();
-                //
-                //  XmlTextReader xmlReader = new XmlTextReader(arquivos);
-                //  while (xmlReader.Read())
-                //  {
-                //      if (xmlReader.LocalName != "")
-                //      {
-                //          TagName = xmlReader.LocalName;
-                //      }
-                //       
-                //      else
-                //          {
-                //              if (TagName == "serie")
-                //              {
-                //                  ped.serieNFE = xmlReader.Value;
-                //              }
-                //              else if (TagName == "nNF")
-                //              {
-                //                  ped.numeroNF = xmlReader.Value;
-                //              }
-                //              else if (TagName == "dhEmi")
-                //              {
-                //                  ped.dataNF = xmlReader.Value;
-                //              }
-                //              else if (TagName == "refNFe")
-                //              {
-                //                  ped.chave_NFE = xmlReader.Value;
-                //              }
-                //        
-                //
-                //        
-                //               else if (TagName == "CNPJ")
-                //              {
-                //                  ped.remetenteCNPJ = xmlReader.Value;
-                //              }
-                //              else if (TagName == "xNome")
-                //              {
-                //                  ped.remetenteRazaoSocial = xmlReader.Value;
-                //              }
-                //              else if (TagName == "xLgr")
-                //              {
-                //                  ped.remetenteEndereco = xmlReader.Value;
-                //              }
-                //              else if (TagName == "nro")
-                //              {
-                //                  ped.remetenteNumero = xmlReader.Value;
-                //              }
-                //              else if (TagName == "xBairro")
-                //              {
-                //                  ped.remetenteBairro = xmlReader.Value;
-                //              }
-                //              else if (TagName == "xMun")
-                //              {
-                //                  ped.remetenteMunicipio = xmlReader.Value;
-                //              }
-                //              else if (TagName == "UF")
-                //              {
-                //                  ped.remetenteNumero = xmlReader.Value;
-                //              }
-                //              else if (TagName == "nro")
-                //              {
-                //                  ped.remetenteNumero = xmlReader.Value;
-                //              }
-                //              else if (TagName == "nro")
-                //              {
-                //                  ped.remetenteNumero = xmlReader.Value;
-                //              }
-                //              else if (TagName == "nro")
-                //              {
-                //                  ped.remetenteNumero = xmlReader.Value;
-                //              }
-                //              else if (TagName == "nro")
-                //              {
-                //                  ped.remetenteNumero = xmlReader.Value;
-                //              }
-                //          }
-                //        
-                //      
-                //
-                //  }
-                //
+                }
+                XmlNodeList vol = doc.GetElementsByTagName("vol");
+                for (int i = 0; i < vol.Count; i++)
+                {
+                    ped.volume = vol[i]["qVol"].InnerText;
+                    ped.peso = vol[i]["pesoB"].InnerText;
+
+                }
             }
             catch (Exception Ex)
             {
