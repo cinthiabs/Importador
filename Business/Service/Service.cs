@@ -38,10 +38,23 @@ namespace Business.Service
                         {
                             for (var c = 0; c < arquivo.Length; c++)
                             {
-                                ProcessaArquivo(item, arquivo[c]);
+                               var pedido =  ProcessaArquivo(item, arquivo[c]);
+                                bool retorno = ValidaPedido(pedido);
+                                if(retorno == false)
+                                {
+                                    bool insert = InsertPedido(pedido);
+                                    if(insert == true)
+                                    {
+                                        GravaLog(pedido, arquivo[c], 1);
+                                    }
+                                    else
+                                    {
+                                        GravaLog(pedido, arquivo[c], 0);
+                                    }
+                                    
+                                }
+
                             }
-
-
                         }
                         _Query.AtualizaHorarioIntegracao(item);
                     }
@@ -66,17 +79,23 @@ namespace Business.Service
 
             return consulta;
         }
+
+        public bool InsertPedido(Pedidos ped)
+        {
+            var retorno = _Query.InsertPedido(ped);
+            return retorno;
+        }
         public string[] BuscaArquivos(string file)
         {
             string[] arquivos = Directory.GetFiles(file);
 
             return arquivos;
         }
-        public void ProcessaArquivo(Dados config, string arquivos)
+        public Pedidos ProcessaArquivo(Dados config, string arquivos)
         {
+           Pedidos ped = new Pedidos();
             try
             {
-                Pedidos ped = new Pedidos();
                 XmlDocument doc = new XmlDocument();
 
                 doc.Load(arquivos);
@@ -147,23 +166,37 @@ namespace Business.Service
                 {
                     ped.volume = vol[i]["qVol"].InnerText;
                     ped.peso = vol[i]["pesoB"].InnerText;
-
                 }
+                
             }
             catch (Exception Ex)
             {
                 //_Query.LogErro(int.Parse(config.Clienteid), "Business - ExportaIMG", Ex.Message, "Foreach de exportação de imagem", int.Parse(config.IdImportacao));
             }
-
+            return ped;
         }
-
-        public bool GravaLog(Log log)
+        public bool ValidaPedido(Pedidos ped)
         {
-            var retorno = _Query.GravaLog(log);
+            var retorno = _Query.BuscaPedido(ped);
             return retorno;
         }
 
+        public bool GravaLog(Pedidos ped, string arquivo, int sucesso )
+        {
+            Logintegracoes log = new Logintegracoes();
+            var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
+            log.arquivo = arquivo;
+            log.documento = ped.Documento;
+            log.data = data;
+            log.sucesso = sucesso.ToString();
+            if(sucesso == 1)
+            {
+                log.pedido = ped.Pedido;
+            }
+            var retorno = _Query.GravaLog(log);
+            return retorno;
+        }
 
     }
 }

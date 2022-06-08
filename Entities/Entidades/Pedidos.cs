@@ -8,7 +8,7 @@ namespace Entities.Entidades
 {
     public class Pedidos
     {
-        public int Pedido { get; set; }
+        public string Pedido { get; set; }
         public string chave_NFE { get; set; }
         public string numeroNF { get; set; }
         public string serieNFE { get; set; }

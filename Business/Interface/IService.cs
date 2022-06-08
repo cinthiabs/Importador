@@ -12,6 +12,8 @@ namespace Business.Interface
         public void Executa();
         public List<Dados> ConsultaDados();
         public string[] BuscaArquivos(string file);
-        public bool GravaLog(Log log);
+        public bool GravaLog(Pedidos ped, string arquivo, int sucesso);
+        public bool ValidaPedido(Pedidos ped);
+        public bool InsertPedido(Pedidos ped);
     }
 }

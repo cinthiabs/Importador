@@ -33,38 +33,42 @@ namespace Infrastructure.Dados
             var retorno = ExecutaComando(sqlQuery);
             return retorno;
         }
-        //public List<Pedidos> BuscaArquivos(Entities.Entidades.Dados config)
-        //{
-        //    var retorno = new List<Pedidos>();
-        //    string query = "";
-        //    try
-        //    {
-        //        query = $@"{config.Informacaoadicional5 } {int.Parse(config.Clienteid)} ,'{Setting.TipoIntegracao}'";
-        //        retorno = ExecutaSelectLista<Pedidos>(query);
-        //    }
-        //    catch (Exception Ex)
-        //    {
-        //      //  LogErro(int.Parse(config.Clienteid), "Infrastructure - BuscaPedidos", Ex.Message, query, int.Parse(config.IdImportacao));
-        //    }
-        //    return retorno;
-        //}
-        public bool GravaLog(Log log)
+        public bool BuscaPedido(Pedidos ped)
+        {
+            var retorno = false;
+       
+            try
+            {
+                string query = $@"select top 1 * from PEDIDO where chave_nfe='{ped.chave_NFE}' and documento ='{ped.Documento}'";
+                retorno = ExecutaComando(query);
+            }
+            catch (Exception Ex)
+            {
+                  //LogErro(int.Parse(config.Clienteid), "Infrastructure - BuscaPedidos", Ex.Message, query, int.Parse(config.IdImportacao));
+            }
+            return retorno;
+        }
+        public bool GravaLog(Logintegracoes log)
         {
             var retorno = false;
             string sqlQuery = "";
             try
             {
-                var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                sqlQuery = $@"Insert into logStatusWS (nrt,status,xml,retorno,data,sucesso,clienteid,chaveNF,nf,serieNF,Documento,aplicacao,CodigoMensagem,Doc_envio) 
-                Values({log.nrt},'{log.xml}', '{log.retorno}','{data}',{log.sucesso},{log.clienteid},'{log.chavenf}','{log.nf}','{log.Documento}','{log.aplicacao}','{log.CodigoMensagem}','{log.Doc_envio}');";
+                sqlQuery = $@"Insert into LogIntegracao (documento,pedido,sucesso,data,arquivo) 
+                Values({log.documento},'{log.pedido}', '{log.sucesso}','{log.data}',{log.arquivo}');";
                 retorno = ExecutaComando(sqlQuery);
             }
             catch (Exception Ex)
             {
-                LogErro(log.clienteid, "Infrastructure - GravaLog", Ex.Message, sqlQuery, 0);
+          //      LogErro(log.clienteid, "Infrastructure - GravaLog", Ex.Message, sqlQuery, 0);
             }
 
             return retorno;
+        }
+        public bool InsertPedido(Pedidos ped)
+        {
+            bool r = false;
+            return r;
         }
         public bool AtualizaHorarioIntegracao(Entities.Entidades.Dados config)
         {

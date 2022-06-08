@@ -10,9 +10,11 @@ namespace Infrastructure.Interface
     public interface IQuerys
     {
         public List<Entities.Entidades.Dados> Dados();
-      //  public List<Pedidos> BuscaArquivos(Entities.Entidades.Dados config);
-        public bool GravaLog(Log log);
+        public bool InsertPedido(Pedidos ped);
+        public bool GravaLog(Logintegracoes log);
         public bool AtualizaHorarioIntegracao(Entities.Entidades.Dados config);
-       
+        public bool BuscaPedido(Pedidos ped);
+
+
     }
 }
