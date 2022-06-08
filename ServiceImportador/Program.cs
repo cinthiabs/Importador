@@ -1,13 +1,15 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using Business.Interface;
+using Business.Service;
+using Infrastructure.Dados;
+using Infrastructure.Interface;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServiceImportador
+namespace Servico
 {
     public class Program
     {
@@ -18,9 +20,13 @@ namespace ServiceImportador
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Worker>();
-                });
+                .ConfigureServices(
+                (hostContext, services) =>
+                     {
+                         services.AddHostedService<Worker>();
+                         services.AddTransient<IService, Service>();
+                         services.AddTransient<IQuerys, Querys>();
+                     }
+                ).UseWindowsService();
     }
 }

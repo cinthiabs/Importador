@@ -1,0 +1,15 @@
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\bin\Release\net5.0\Infrastructure.deps.json
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\bin\Release\net5.0\Infrastructure.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\bin\Release\net5.0\ref\Infrastructure.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\bin\Release\net5.0\Infrastructure.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\bin\Release\net5.0\Entities.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\bin\Release\net5.0\Entities.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.CopyComplete
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\ref\Infrastructure.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.pdb

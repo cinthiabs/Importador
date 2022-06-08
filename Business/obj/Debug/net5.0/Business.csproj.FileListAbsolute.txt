@@ -1,0 +1,68 @@
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Business.deps.json
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Business.dll
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\ref\Business.dll
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Business.pdb
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Entities.dll
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Infrastructure.dll
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Entities.pdb
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Infrastructure.pdb
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.csprojAssemblyReference.cache
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.dll
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\ref\Business.dll
+D:\Projetos\Sequoia\Vesta\Outros\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\ref\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Entities.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Entities.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\ref\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\ServicoExportacaoImagem\ServicoExportacaoImagem\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\ref\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Entities.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Entities.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\ref\Business.dll
+C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Business\obj\Debug\net5.0\Business.pdb
+C:\git\Importador\Business\bin\Debug\net5.0\Business.deps.json
+C:\git\Importador\Business\bin\Debug\net5.0\Business.dll
+C:\git\Importador\Business\bin\Debug\net5.0\ref\Business.dll
+C:\git\Importador\Business\bin\Debug\net5.0\Business.pdb
+C:\git\Importador\Business\bin\Debug\net5.0\Entities.dll
+C:\git\Importador\Business\bin\Debug\net5.0\Infrastructure.dll
+C:\git\Importador\Business\bin\Debug\net5.0\Entities.pdb
+C:\git\Importador\Business\bin\Debug\net5.0\Infrastructure.pdb
+C:\git\Importador\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\git\Importador\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\Importador\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\git\Importador\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\git\Importador\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\git\Importador\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+C:\git\Importador\Business\obj\Debug\net5.0\Business.dll
+C:\git\Importador\Business\obj\Debug\net5.0\ref\Business.dll
+C:\git\Importador\Business\obj\Debug\net5.0\Business.pdb
