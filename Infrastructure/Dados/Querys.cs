@@ -29,7 +29,7 @@ namespace Infrastructure.Dados
         public bool LogErro(int id, int sucesso, string erro)
         {
             var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string sqlQuery = $@"Insert into LogIntegracao (id,sucesso,data,erro) values({id},{sucesso},'{erro}');";
+            string sqlQuery = $@"Insert into LogIntegracao (id,sucesso,data,erro) values({id},{sucesso},'{data}','{erro}');";
             var retorno = ExecutaComando(sqlQuery);
             return retorno;
         }
@@ -67,8 +67,50 @@ namespace Infrastructure.Dados
         }
         public bool InsertPedido(Pedidos ped)
         {
-            bool r = false;
-            return r;
+            var retorno = false;
+            string sqlQuery = "";
+            var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            try
+            {
+                sqlQuery = $@"Insert into pedido 
+                Values('{ped.chave_NFE}',
+                       '{ped.numeroNF}',
+                       '{ped.serieNFE}',
+                       '{ped.tpNF}',
+                       '{ped.cod_Mun}',
+                       '{ped.dataNF}',
+                       '{data}',
+                       '{ped.dataNF}',
+                       '{ped.Documento}',
+                       '{ped.remetenteCNPJ}',
+                       '{ped.remetenteIE}',
+                       '{ped.remetenteRazaoSocial}',
+                       '{ped.remetenteNumero}',
+                       '{ped.remetenteBairro}',
+                       '{ped.remetenteMunicipio}',
+                       '{ped.remetenteCEP}',
+                       '{ped.remetenteUF}',
+                       '{ped.destinatarioIE}',
+                       '{ped.destinatarioCNPJ}',
+                       '{ped.destinatarioRazaoSocial}',
+                       '{ped.destinatarioEndereco}',
+                       '{ped.destinatarioMunicipio}',
+                       '{ped.destinatarioMunicipioID}',
+                       '{ped.destinatarioCEP}',
+                       '{ped.destinatarioUF}',
+                       '{ped.InformacaoAdicional}',
+                       '{ped.valor}',
+                       '{ped.volume}',
+                       '{ped.peso}',
+                       '{ped.destinatarioBairro}';";
+                retorno = ExecutaComando(sqlQuery);
+            }
+            catch (Exception Ex)
+            {
+                LogErro(0, 0, Ex.Message);
+            }
+
+            return retorno;
         }
         public bool AtualizaHorarioIntegracao(Entities.Entidades.Dados config)
         {

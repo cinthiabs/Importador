@@ -38,7 +38,7 @@ namespace Business.Service
                         {
                             for (var c = 0; c < arquivo.Length; c++)
                             {
-                               var pedido =  ProcessaArquivo(item, arquivo[c]);
+                               var pedido =  ProcessaArquivo(arquivo[c]);
                                 bool retorno = ValidaPedido(pedido);
                                 if(retorno == false)
                                 {
@@ -92,7 +92,7 @@ namespace Business.Service
 
             return arquivos;
         }
-        public Pedidos ProcessaArquivo(Dados config, string arquivos)
+        public Pedidos ProcessaArquivo(string arquivos)
         {
            Pedidos ped = new Pedidos();
             try
@@ -105,9 +105,11 @@ namespace Business.Service
                 for(int i = 0; i< ide.Count; i++)
                 {
                     ped.serieNFE  = ide[i]["serie"].InnerText;
-                    ped.numeroNF =  ide[i]["nNF"].InnerText;
+                    ped.numeroNF  = ide[i]["nNF"].InnerText;
                     ped.Documento = ide[i]["nNF"].InnerText;
-                    ped.dataNF =    ide[i]["dhEmi"].InnerText;
+                    ped.dataNF    = ide[i]["dhEmi"].InnerText;
+                    ped.tpNF      = ide[i]["tpNF"].InnerText;
+                    ped.cod_Mun   = ide[i]["cMunFG"].InnerText;
                 }
                  XmlNodeList NFref = doc.GetElementsByTagName("NFref");
                 for (int i = 0; i < NFref.Count; i++)
