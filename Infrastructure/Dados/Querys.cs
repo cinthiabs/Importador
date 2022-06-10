@@ -21,15 +21,15 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                LogErro(0,"Infrastructure - DadosIntegracoes", Ex.Message,"",0);
+                LogErro(0,0, Ex.Message);
             }
 
             return retorno;
         }
-        public bool LogErro(int clienteID, string metodo, string erro, string observacao, int idImportacao)
+        public bool LogErro(int id, int sucesso, string erro)
         {
             var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string sqlQuery = $@"Insert into logerrointegracoes values('{data}',{clienteID},'{Setting.TipoIntegracao}', '{metodo}','{erro}',{observacao},{idImportacao});";
+            string sqlQuery = $@"Insert into LogIntegracao (id,sucesso,data,erro) values({id},{sucesso},'{erro}');";
             var retorno = ExecutaComando(sqlQuery);
             return retorno;
         }
@@ -44,7 +44,7 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                  //LogErro(int.Parse(config.Clienteid), "Infrastructure - BuscaPedidos", Ex.Message, query, int.Parse(config.IdImportacao));
+                LogErro(0, 0, Ex.Message);
             }
             return retorno;
         }
@@ -60,7 +60,7 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-          //      LogErro(log.clienteid, "Infrastructure - GravaLog", Ex.Message, sqlQuery, 0);
+                LogErro(0, 0, Ex.Message);
             }
 
             return retorno;
@@ -82,7 +82,7 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                //LogErro(int.Parse(config.Clienteid), "Infrastructure - AtualizaHorarioIntegracao", Ex.Message, "", int.Parse(config.id));
+                LogErro(0, 0, Ex.Message);
             }
             return r;
         }

@@ -46,6 +46,7 @@ namespace Business.Service
                                     if(insert == true)
                                     {
                                         GravaLog(pedido, arquivo[c], 1);
+
                                     }
                                     else
                                     {
@@ -62,7 +63,7 @@ namespace Business.Service
             }
             catch (Exception Ex)
             {
-                //  _Query.LogErro(0,"Business - Executa", Ex.Message, "", 0);
+                _Query.LogErro(0, 0, Ex.Message);
             }
         }
         public List<Dados> ConsultaDados()
@@ -74,7 +75,7 @@ namespace Business.Service
             }
             catch (Exception Ex)
             {
-                //  _Query.LogErro(0, "Business - ConsultaDadosIntegracoes", Ex.Message, "", 0);
+                _Query.LogErro(0, 0, Ex.Message);
             }
 
             return consulta;
@@ -171,7 +172,7 @@ namespace Business.Service
             }
             catch (Exception Ex)
             {
-                //_Query.LogErro(int.Parse(config.Clienteid), "Business - ExportaIMG", Ex.Message, "Foreach de exportação de imagem", int.Parse(config.IdImportacao));
+               _Query.LogErro(0, 0, Ex.Message);
             }
             return ped;
         }

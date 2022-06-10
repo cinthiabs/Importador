@@ -23,5 +23,6 @@ namespace Entities.Entidades
         public string Intervalo { get; set; }
         public string UltimaExecucao { get; set; }
         public string ProximaExecucao { get; set; }
+        public string diretorioErro { get; set; }
     }
 }
