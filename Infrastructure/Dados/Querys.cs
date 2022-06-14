@@ -54,7 +54,7 @@ namespace Infrastructure.Dados
             try
             {
                 sqlQuery = $@"Insert into LogIntegracao (documento,pedido,sucesso,data,arquivo,obs) 
-                Values('{log.documento}','{log.pedido}', '{log.sucesso}','{log.data}','{log.arquivo}', '{log.o}');";
+                Values('{log.documento}','{log.pedido}', '{log.sucesso}','{log.data}','{log.arquivo}', '{log.obs}');";
                 retorno = ExecutaComando(sqlQuery);
             }
             catch (Exception Ex)
