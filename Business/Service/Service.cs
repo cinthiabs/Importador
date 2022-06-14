@@ -158,14 +158,15 @@ namespace Business.Service
                 XmlNodeList dest = doc.GetElementsByTagName("dest");
                 for (int i = 0; i < dest.Count; i++)
                 {
-                    ped.destinatarioCNPJ = dest[i]["CPF"].InnerText;
+                    ped.destinatarioCPF = dest[i]["CPF"].InnerText;
+                    ped.destinatarioCNPJ = dest[i]["CNPJ"].InnerText;
                     ped.destinatarioRazaoSocial = dest[i]["xNome"].InnerText;
              
                 }
                 XmlNodeList enderDest = doc.GetElementsByTagName("enderDest");
                 for (int i = 0; i < enderDest.Count; i++)
                 {
-                    ped.destinatarioEndereco = enderDest[i]["xLgr"].InnerText + enderDest[i]["nro"].InnerText;
+                    ped.destinatarioEndereco = enderDest[i]["xLgr"].InnerText + " " +enderDest[i]["nro"].InnerText;
                     ped.destinatarioBairro = enderDest[i]["xBairro"].InnerText;
                     ped.destinatarioMunicipio = enderDest[i]["xMun"].InnerText;
                     ped.destinatarioUF = enderDest[i]["UF"].InnerText;

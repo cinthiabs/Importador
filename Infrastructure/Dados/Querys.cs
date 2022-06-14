@@ -70,10 +70,40 @@ namespace Infrastructure.Dados
         {
             var retorno = false;
             string sqlQuery = "";
-            var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            var data = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
             try
             {
-                sqlQuery = $@"Insert into pedido 
+                sqlQuery = $@"Insert into pedido (
+                      chave_NFE
+                      ,numeroNF
+                      ,serieNFE
+                      ,tpNF
+                      ,cod_Mun
+                      ,dataNF
+                      ,data_Inclusao
+                      ,Documento
+                      ,remetenteCNPJ
+                      ,remetenteIE
+                      ,remetenteRazaoSocial
+                      ,remetenteEndereco
+                      ,remetenteNumero
+                      ,remetenteBairro
+                      ,remetenteMunicipio
+                      ,remetenteCEP
+                      ,remetenteUF
+                      ,destinatarioIE
+                      ,destinatarioCPF
+                      ,destinatarioCNPJ
+                      ,destinatarioRazaoSocial
+                      ,destinatarioEndereco
+                      ,destinatarioMunicipio
+                      ,destinatarioCEP
+                      ,destinatarioUF
+                      ,InformacaoAdicional
+                      ,valor
+                      ,volume
+                      ,peso
+                      ,destinatarioBairro)
                 Values('{ped.chave_NFE}',
                        '{ped.numeroNF}',
                        '{ped.serieNFE}',
@@ -81,28 +111,28 @@ namespace Infrastructure.Dados
                        '{ped.cod_Mun}',
                        '{ped.dataNF}',
                        '{data}',
-                       '{ped.dataNF}',
                        '{ped.Documento}',
                        '{ped.remetenteCNPJ}',
                        '{ped.remetenteIE}',
                        '{ped.remetenteRazaoSocial}',
+                       '{ped.remetenteEndereco}',
                        '{ped.remetenteNumero}',
                        '{ped.remetenteBairro}',
                        '{ped.remetenteMunicipio}',
                        '{ped.remetenteCEP}',
                        '{ped.remetenteUF}',
                        '{ped.destinatarioIE}',
+                       '{ped.destinatarioCPF}',
                        '{ped.destinatarioCNPJ}',
                        '{ped.destinatarioRazaoSocial}',
                        '{ped.destinatarioEndereco}',
                        '{ped.destinatarioMunicipio}',
-                       '{ped.destinatarioMunicipioID}',
                        '{ped.destinatarioCEP}',
                        '{ped.destinatarioUF}',
                        '{ped.InformacaoAdicional}',
                        '{ped.valor}',
                        '{ped.volume}',
-                       '{ped.peso}',
+                       {ped.peso},
                        '{ped.destinatarioBairro}');";
                 retorno = ExecutaComando(sqlQuery);
             }
