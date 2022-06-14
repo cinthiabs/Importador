@@ -102,7 +102,7 @@ namespace Infrastructure.Dados
                        '{ped.valor}',
                        '{ped.volume}',
                        '{ped.peso}',
-                       '{ped.destinatarioBairro}';";
+                       '{ped.destinatarioBairro}');";
                 retorno = ExecutaComando(sqlQuery);
             }
             catch (Exception Ex)

@@ -46,13 +46,15 @@ namespace Business.Service
                                     if(insert == true)
                                     {
                                         GravaLog(pedido, arquivo[c], 1);
-
+                                        MoveArquivo(arquivo[c], item, 1);
                                     }
                                     else
                                     {
                                         GravaLog(pedido, arquivo[c], 0);
+                                        MoveArquivo(arquivo[c], item, 0);
+
                                     }
-                                    
+
                                 }
 
                             }
@@ -79,6 +81,19 @@ namespace Business.Service
             }
 
             return consulta;
+        }
+        public void MoveArquivo(string arquivo, Dados dados, int sucesso)
+        {
+            string dadosConfig = "";
+            if (sucesso == 1)
+            {
+                dadosConfig = dados.diretorioSaida;
+            }
+            else
+            {
+                dadosConfig = dados.diretorioErro;
+            }
+           Directory.Move(dados.diretorioEntrada + arquivo, dadosConfig + arquivo);
         }
 
         public bool InsertPedido(Pedidos ped)
