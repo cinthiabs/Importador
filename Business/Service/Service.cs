@@ -65,7 +65,7 @@ namespace Business.Service
             }
             catch (Exception Ex)
             {
-                _Query.LogErro(0, 0, Ex.Message);
+                _Query.LogErro(0, Ex.Message);
             }
         }
         public List<Dados> ConsultaDados()
@@ -77,7 +77,7 @@ namespace Business.Service
             }
             catch (Exception Ex)
             {
-                _Query.LogErro(0, 0, Ex.Message);
+                _Query.LogErro(0, Ex.Message);
             }
 
             return consulta;
@@ -85,6 +85,10 @@ namespace Business.Service
         public void MoveArquivo(string arquivo, Dados dados, int sucesso)
         {
             string dadosConfig = "";
+            var filename = arquivo.Split('\\');
+            string name = filename[filename.Length - 1];
+
+
             if (sucesso == 1)
             {
                 dadosConfig = dados.diretorioSaida;
@@ -93,7 +97,7 @@ namespace Business.Service
             {
                 dadosConfig = dados.diretorioErro;
             }
-           Directory.Move(dados.diretorioEntrada + arquivo, dadosConfig + arquivo);
+           Directory.Move(dados.diretorioEntrada + name, dadosConfig + name);
         }
 
         public bool InsertPedido(Pedidos ped)
@@ -189,7 +193,7 @@ namespace Business.Service
             }
             catch (Exception Ex)
             {
-               _Query.LogErro(0, 0, Ex.Message);
+                _Query.LogErro(0, Ex.Message);
             }
             return ped;
         }
@@ -202,7 +206,7 @@ namespace Business.Service
         public bool GravaLog(Pedidos ped, string arquivo, int sucesso )
         {
             Logintegracoes log = new Logintegracoes();
-            var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            var data = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
 
             log.arquivo = arquivo;
             log.documento = ped.Documento;

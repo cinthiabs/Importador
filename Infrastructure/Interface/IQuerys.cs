@@ -14,7 +14,7 @@ namespace Infrastructure.Interface
         public bool GravaLog(Logintegracoes log);
         public bool AtualizaHorarioIntegracao(Entities.Entidades.Dados config);
         public bool BuscaPedido(Pedidos ped);
-        public bool LogErro(int id, int sucesso, string erro);
+        public bool LogErro( int sucesso, string erro);
 
 
     }

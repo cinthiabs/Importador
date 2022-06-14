@@ -21,15 +21,15 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                LogErro(0,0, Ex.Message);
+                LogErro(0, Ex.Message);
             }
 
             return retorno;
         }
-        public bool LogErro(int id, int sucesso, string erro)
+        public bool LogErro(int sucesso, string erro)
         {
-            var data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string sqlQuery = $@"Insert into LogIntegracao (id,sucesso,data,erro) values({id},{sucesso},'{data}','{erro}');";
+            var data = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
+            string sqlQuery = $@"Insert into LogIntegracao (sucesso,data,obs) values({sucesso},'{data}','{erro}');";
             var retorno = ExecutaComando(sqlQuery);
             return retorno;
         }
@@ -44,7 +44,7 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                LogErro(0, 0, Ex.Message);
+                LogErro( 0, Ex.Message);
             }
             return retorno;
         }
@@ -55,12 +55,13 @@ namespace Infrastructure.Dados
             try
             {
                 sqlQuery = $@"Insert into LogIntegracao (documento,pedido,sucesso,data,arquivo) 
-                Values({log.documento},'{log.pedido}', '{log.sucesso}','{log.data}',{log.arquivo}');";
+                Values('{log.documento}','{log.pedido}', '{log.sucesso}','{log.data}','{log.arquivo}');";
                 retorno = ExecutaComando(sqlQuery);
             }
             catch (Exception Ex)
             {
-                LogErro(0, 0, Ex.Message);
+
+                LogErro(0, Ex.Message);
             }
 
             return retorno;
@@ -107,7 +108,7 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                LogErro(0, 0, Ex.Message);
+                LogErro(0, Ex.Message);
             }
 
             return retorno;
@@ -124,7 +125,7 @@ namespace Infrastructure.Dados
             }
             catch (Exception Ex)
             {
-                LogErro(0, 0, Ex.Message);
+                LogErro(0, Ex.Message);
             }
             return r;
         }
