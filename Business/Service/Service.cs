@@ -88,7 +88,6 @@ namespace Business.Service
             var filename = arquivo.Split('\\');
             string name = filename[filename.Length - 1];
 
-
             if (sucesso == 1)
             {
                 dadosConfig = dados.diretorioSaida;
@@ -130,12 +129,6 @@ namespace Business.Service
                     ped.tpNF      = ide[i]["tpNF"].InnerText;
                     ped.cod_Mun   = ide[i]["cMunFG"].InnerText;
                 }
-                 XmlNodeList NFref = doc.GetElementsByTagName("NFref");
-                for (int i = 0; i < NFref.Count; i++)
-                {
-                    ped.chave_NFE = NFref[i]["refNFe"].InnerText;
-
-                }
                 XmlNodeList emit = doc.GetElementsByTagName("emit");
                 for (int i = 0; i < emit.Count; i++)
                 {
@@ -159,7 +152,6 @@ namespace Business.Service
                 for (int i = 0; i < dest.Count; i++)
                 {
                     ped.destinatarioCPF = dest[i]["CPF"].InnerText;
-                    ped.destinatarioCNPJ = dest[i]["CNPJ"].InnerText;
                     ped.destinatarioRazaoSocial = dest[i]["xNome"].InnerText;
              
                 }
@@ -190,7 +182,13 @@ namespace Business.Service
                     ped.volume = vol[i]["qVol"].InnerText;
                     ped.peso = vol[i]["pesoB"].InnerText;
                 }
-                
+
+                XmlNodeList infProt = doc.GetElementsByTagName("infProt");
+                for (int i = 0; i < infProt.Count; i++)
+                {
+                    ped.chave_NFE = infProt[i]["chNFe"].InnerText; 
+                }
+
             }
             catch (Exception Ex)
             {
@@ -215,7 +213,11 @@ namespace Business.Service
             log.sucesso = sucesso.ToString();
             if(sucesso == 1)
             {
-                log.pedido = ped.Pedido;
+                log.obs = "Arquivo importado com sucesso";
+            }
+            else
+            {
+                log.obs = "Erro na importação";
             }
             var retorno = _Query.GravaLog(log);
             return retorno;

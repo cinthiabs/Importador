@@ -13,7 +13,6 @@ namespace Infrastructure.Dados
         public List<Entities.Entidades.Dados> Dados()
         {
             var retorno = new List<Entities.Entidades.Dados>();
-            var Data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             try
             {
                 string sqlQuery = $@"select * from dados WITH(NOLOCK) where integracao = '{Setting.TipoIntegracao}' and ativo = 1;";
@@ -54,8 +53,8 @@ namespace Infrastructure.Dados
             string sqlQuery = "";
             try
             {
-                sqlQuery = $@"Insert into LogIntegracao (documento,pedido,sucesso,data,arquivo) 
-                Values('{log.documento}','{log.pedido}', '{log.sucesso}','{log.data}','{log.arquivo}');";
+                sqlQuery = $@"Insert into LogIntegracao (documento,pedido,sucesso,data,arquivo,obs) 
+                Values('{log.documento}','{log.pedido}', '{log.sucesso}','{log.data}','{log.arquivo}', '{log.o}');";
                 retorno = ExecutaComando(sqlQuery);
             }
             catch (Exception Ex)
@@ -145,8 +144,8 @@ namespace Infrastructure.Dados
         }
         public bool AtualizaHorarioIntegracao(Entities.Entidades.Dados config)
         {
-            var DataProxima = DateTime.Now.AddMinutes(int.Parse(config.Integracao)).ToString("yyyy-MM-dd HH:mm:ss");
-            var DataUltima = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            var DataProxima = DateTime.Now.AddMinutes(int.Parse(config.Integracao)).ToString("yyyy-dd-MM HH:mm:ss");
+            var DataUltima = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
             bool r = false;
             try
             {
