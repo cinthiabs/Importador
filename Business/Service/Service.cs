@@ -96,7 +96,7 @@ namespace Business.Service
             {
                 dadosConfig = dados.diretorioErro;
             }
-           Directory.Move(dados.diretorioEntrada + name, dadosConfig + name);
+             Directory.Move(dados.diretorioEntrada + name, dadosConfig + name);
         }
 
         public bool InsertPedido(Pedidos ped)
