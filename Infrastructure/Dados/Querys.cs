@@ -144,12 +144,12 @@ namespace Infrastructure.Dados
         }
         public bool AtualizaHorarioIntegracao(Entities.Entidades.Dados config)
         {
-            var DataProxima = DateTime.Now.AddMinutes(int.Parse(config.Integracao)).ToString("yyyy-dd-MM HH:mm:ss");
+            var DataProxima = DateTime.Now.AddMinutes(int.Parse(config.Intervalo)).ToString("yyyy-dd-MM HH:mm:ss");
             var DataUltima = DateTime.Now.ToString("yyyy-dd-MM HH:mm:ss");
             bool r = false;
             try
             {
-                var sqlQuery = $@"update Dados set ProximaExecucao = '{DataProxima}', UltimaExecucao ='{DataUltima}' where idimportacao = {config.id};";
+                var sqlQuery = $@"update Dados set ProximaExecucao = '{DataProxima}', UltimaExecucao ='{DataUltima}' where id = {config.id};";
                 r = ExecutaComando(sqlQuery);
             }
             catch (Exception Ex)

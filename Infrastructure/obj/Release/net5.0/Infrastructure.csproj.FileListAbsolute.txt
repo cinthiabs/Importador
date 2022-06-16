@@ -13,3 +13,18 @@ C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastr
 C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.dll
 C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\ref\Infrastructure.dll
 C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Infrastructure\obj\Release\net5.0\Infrastructure.pdb
+C:\git\Importador\Infrastructure\bin\Release\net5.0\Infrastructure.deps.json
+C:\git\Importador\Infrastructure\bin\Release\net5.0\Infrastructure.dll
+C:\git\Importador\Infrastructure\bin\Release\net5.0\ref\Infrastructure.dll
+C:\git\Importador\Infrastructure\bin\Release\net5.0\Infrastructure.pdb
+C:\git\Importador\Infrastructure\bin\Release\net5.0\Entities.dll
+C:\git\Importador\Infrastructure\bin\Release\net5.0\Entities.pdb
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.AssemblyInfo.cs
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.csproj.CopyComplete
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.dll
+C:\git\Importador\Infrastructure\obj\Release\net5.0\ref\Infrastructure.dll
+C:\git\Importador\Infrastructure\obj\Release\net5.0\Infrastructure.pdb

@@ -10,3 +10,15 @@ C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Entities
 C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Entities\obj\Release\net5.0\Entities.dll
 C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Entities\obj\Release\net5.0\ref\Entities.dll
 C:\Users\DELL-EQP108\Desktop\N3\FONTES AJUSTADOS\Projeto_modelo\Projeto\Entities\obj\Release\net5.0\Entities.pdb
+C:\git\Importador\Entities\bin\Release\net5.0\Entities.deps.json
+C:\git\Importador\Entities\bin\Release\net5.0\Entities.dll
+C:\git\Importador\Entities\bin\Release\net5.0\ref\Entities.dll
+C:\git\Importador\Entities\bin\Release\net5.0\Entities.pdb
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.csproj.AssemblyReference.cache
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.AssemblyInfoInputs.cache
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.AssemblyInfo.cs
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.csproj.CoreCompileInputs.cache
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.dll
+C:\git\Importador\Entities\obj\Release\net5.0\ref\Entities.dll
+C:\git\Importador\Entities\obj\Release\net5.0\Entities.pdb

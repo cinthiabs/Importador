@@ -45,4 +45,3 @@ C:\git\Importador\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.ca
 C:\git\Importador\Entities\obj\Debug\net5.0\Entities.dll
 C:\git\Importador\Entities\obj\Debug\net5.0\ref\Entities.dll
 C:\git\Importador\Entities\obj\Debug\net5.0\Entities.pdb
-C:\git\Importador\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
